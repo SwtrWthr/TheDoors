@@ -1,0 +1,430 @@
+<template>
+  <div>
+    <v-app class="bg-light">
+      <v-snackbar
+        v-model="snackbar"
+        top
+        right
+        color="success"
+        text
+      >
+        {{snackbar_text}}
+        <template v-slot:action="{ attrs }">
+          <v-btn
+            color="success"
+            text
+            v-bind="attrs"
+            @click="snackbar = false"
+          >
+            <v-icon>{{mdiClose}}</v-icon>
+          </v-btn>
+        </template>
+      </v-snackbar>
+      <template v-if="loading">
+        <v-skeleton-loader
+          class="mx-auto"
+          width="100%"
+          height="100%"
+          type="image"
+        ></v-skeleton-loader>
+        <v-skeleton-loader
+          class="mx-auto"
+          width="100%"
+          height="100%"
+          type="image"
+        ></v-skeleton-loader>
+        <v-row>
+          <b-row class="d-flex justify-content-md-between">
+            <b-col xl="3" class="font-weight-bold p-4">
+              <div>
+                <b-row align-h="around">
+                  <b-col>
+                    <hr>
+                  </b-col>
+                  <b-col class="px-0 text-center" style="letter-spacing: 0.1em; font-size: 18px">
+                    ПОИСК
+                  </b-col>
+                  <b-col>
+                    <hr>
+                  </b-col>
+                </b-row>
+                <b-row class="mt-3 mx-0">
+                  <b-col cols="12" class="px-0">
+                    <v-text-field
+                      :append-icon="mdiMagnify"
+                      v-model="search"
+                      outlined
+                      label="search"
+                      dense
+                    >
+                    </v-text-field>
+                  </b-col>
+                </b-row>
+              </div>
+              <div class="mt-2">
+                <b-row align-h="around">
+                  <b-col>
+                    <hr>
+                  </b-col>
+                  <b-col class="px-0 text-center" style="letter-spacing: 0.1em; font-size: 18px">
+                    БРЭНДЫ
+                  </b-col>
+                  <b-col>
+                    <hr>
+                  </b-col>
+                </b-row>
+                <b-row class="mx-0 justify-content-md-between">
+                  <v-skeleton-loader
+                    type="article"
+                    width="100%"
+                    height="100%"
+                  ></v-skeleton-loader>
+                </b-row>
+              </div>
+              <div class="mt-4">
+                <b-row align-h="around">
+                  <b-col>
+                    <hr>
+                  </b-col>
+                  <b-col class="px-0 text-center" style="letter-spacing: 0.1em; font-size: 18px">
+                    СТРАНА
+                  </b-col>
+                  <b-col>
+                    <hr>
+                  </b-col>
+                </b-row>
+                <b-row class="mx-0 justify-content-md-between">
+                  <v-skeleton-loader
+                    type="article"
+                    width="100%"
+                    height="100%"
+                  ></v-skeleton-loader>
+                </b-row>
+              </div>
+            </b-col>
+            <b-col xl="9" class="text-center font-weight-bold p-4">
+              <b-row align-h="around">
+                <b-col xs="5">
+                  <hr>
+                </b-col>
+                <b-col xs="2" style="letter-spacing: 0.1em; font-size: 18px">
+                  ДВЕРИ
+                </b-col>
+                <b-col xs="5">
+                  <hr>
+                </b-col>
+              </b-row>
+              <b-row>
+                <b-col lg="4" v-for="door in 9" :key="door" class="text-center p-3">
+                  <v-skeleton-loader
+                    type="image, article"
+                  ></v-skeleton-loader>
+                </b-col>
+              </b-row>
+            </b-col>
+          </b-row>
+        </v-row>
+      </template>
+      <template v-else>
+        <c-carousel></c-carousel>
+        <b-row class="d-flex justify-content-md-between">
+          <b-col xl="3" class="font-weight-bold p-4">
+            <div>
+              <b-row align-h="around">
+                <b-col>
+                  <hr>
+                </b-col>
+                <b-col class="px-0 text-center" style="letter-spacing: 0.1em; font-size: 18px">
+                  ПОИСК
+                </b-col>
+                <b-col>
+                  <hr>
+                </b-col>
+              </b-row>
+              <b-row class="mt-3 mx-0">
+                <b-col cols="12" class="px-0">
+                  <v-text-field
+                    :append-icon="mdiMagnify"
+                    v-model="search"
+                    outlined
+                    label="search"
+                    dense
+                  >
+                  </v-text-field>
+                </b-col>
+              </b-row>
+            </div>
+            <div class="mt-2">
+              <b-row align-h="around">
+                <b-col>
+                  <hr>
+                </b-col>
+                <b-col class="px-0 text-center" style="letter-spacing: 0.1em; font-size: 18px">
+                  БРЭНДЫ
+                </b-col>
+                <b-col>
+                  <hr>
+                </b-col>
+              </b-row>
+              <b-row v-for="brand in filtered_brands" :key="brand.id" class="mx-0 justify-content-md-between">
+                <b-col class="p-0">
+                  <b-checkbox v-model="selected_brands" :value="brand.id"
+                              class="float-left brand-checkbox shadow-none">{{ brand.name }}
+                  </b-checkbox>
+                </b-col>
+                <b-col class="p-0">
+                <span
+                  class="float-right text-muted">({{
+                    GET_DOORS.filter(door => door.brand.id == brand.id).length
+                  }})</span>
+                </b-col>
+              </b-row>
+            </div>
+            <div class="mt-4">
+              <b-row align-h="around">
+                <b-col>
+                  <hr>
+                </b-col>
+                <b-col class="px-0 text-center" style="letter-spacing: 0.1em; font-size: 18px">
+                  СТРАНА
+                </b-col>
+                <b-col>
+                  <hr>
+                </b-col>
+              </b-row>
+              <b-row v-for="country in filtered_countries" :key="country.id"
+                     v-if="GET_DOORS.filter(door => door.country.id == country.id).length > 0"
+                     class="mx-0 justify-content-md-between">
+                <b-col class="p-0">
+                  <b-checkbox v-model="selected_countries" :value="country.id"
+                              class="float-left brand-checkbox shadow-none">{{ country.name }}
+                  </b-checkbox>
+                </b-col>
+                <b-col class="p-0">
+                <span
+                  class="float-right text-muted">({{
+                    filtered_doors.filter(door => door.country.id == country.id).length
+                  }})</span>
+                </b-col>
+              </b-row>
+            </div>
+            <!--                <div class="mt-4">-->
+            <!--                    <b-row align-h="around">-->
+            <!--                        <b-col>-->
+            <!--                            <hr>-->
+            <!--                        </b-col>-->
+            <!--                        <b-col class="px-0 text-center" style="letter-spacing: 0.1em; font-size: 18px">-->
+            <!--                            МАТЕРИАЛ-->
+            <!--                        </b-col>-->
+            <!--                        <b-col>-->
+            <!--                            <hr>-->
+            <!--                        </b-col>-->
+            <!--                    </b-row>-->
+            <!--                    <b-row v-for="material in GET_MATERIALS" :key="material.id" class="mx-0 justify-content-md-between">-->
+            <!--                        <b-col>-->
+            <!--                            <b-checkbox v-model="filtered_materials" :value="material.id"-->
+            <!--                                        class="float-left brand-checkbox shadow-none">{{ material.name }}-->
+            <!--                            </b-checkbox>-->
+            <!--                        </b-col>-->
+            <!--                        <b-col>-->
+            <!--                            <span-->
+            <!--                                class="float-right text-muted">({{ GET_DOORS.filter(door => door.country_id == country.id).length }})</span>-->
+            <!--                        </b-col>-->
+            <!--                    </b-row>-->
+            <!--                </div>-->
+          </b-col>
+          <b-col xl="9" class="text-center font-weight-bold p-4">
+            <b-row align-h="around">
+              <b-col xs="5">
+                <hr>
+              </b-col>
+              <b-col xs="2" style="letter-spacing: 0.1em; font-size: 18px">
+                ДВЕРИ
+              </b-col>
+              <b-col xs="5">
+                <hr>
+              </b-col>
+            </b-row>
+            <transition-group
+              name="fade"
+              mode="out-in"
+              tag="b-row"
+            >
+              <b-col lg="4" v-for="door in filtered_doors" :key="door.id" class="text-center p-3">
+                <div class="border bg-white">
+                  <b-img :src="'../images/'+door.image" fluid class="mt-3 mb-2"></b-img>
+                  <p class="font-weight-bold text-info mb-0"
+                     style="font-size: 28px">{{ door.price | price_format }}<i>₸</i></p>
+                  <p>{{ door.name }}</p>
+                  <v-btn
+                    class="mb-3"
+                    depressed
+                    color="primary"
+                    :ripple="false"
+                    @click="addToCart(door.id)"
+                  >Добавить в корзину
+                  </v-btn>
+                </div>
+              </b-col>
+            </transition-group>
+          </b-col>
+        </b-row>
+      </template>
+    </v-app>
+  </div>
+</template>
+
+<script>
+import {mapActions, mapGetters} from 'vuex'
+import {mdiMagnify, mdiClose} from '@mdi/js'
+
+export default {
+  name: "Home",
+  data() {
+    return {
+      mdiClose,
+      snackbar: false,
+      snackbar_text: '',
+      loading: false,
+      mdiMagnify,
+      search: '',
+      selected_brands: [],
+      filtered_brands: [],
+      filtered_doors: [],
+      selected_countries: [],
+      filtered_countries: []
+      // filtered_materials: []
+    }
+  },
+  mounted() {
+    this.loading = true
+    this.GET_BRANDS_API()
+      .then(() => {
+        this.filtered_brands = [...this.GET_BRANDS]
+      })
+    this.GET_COUNTRIES_API()
+      .then(() => {
+        this.filtered_countries = [...this.GET_COUNTRIES]
+      })
+    this.GET_MATERIALS_API()
+    this.GET_DOORS_API()
+      .then(() => {
+        this.filtered_doors = [...this.GET_DOORS]
+        this.$store.commit('SET_BSD', this.filtered_doors)
+      })
+      .finally(() => {
+        this.loading = false
+      })
+  },
+  watch: {
+    search() {
+      console.log(this.$store.getters.GET_BEFORE_SEARCH_DOORS)
+      if (this.search.length > 0) {
+        this.filtered_doors = this.$store.getters.GET_BEFORE_SEARCH_DOORS.filter(door => {
+          return door.name.toLowerCase().includes(this.search.toLowerCase())
+        })
+
+      } else {
+        this.filtered_doors = [...this.$store.getters.GET_BEFORE_SEARCH_DOORS]
+      }
+    },
+    selected_brands() {
+      if (this.selected_brands.length > 0) {
+        this.filtered_doors = this.GET_DOORS.filter(door => {
+          return this.selected_brands.includes(parseInt(door.brand.id))
+        })
+        this.filtered_countries = this.GET_COUNTRIES.filter(country => {
+          return this.filtered_doors.map(door => {
+            return door.country.id
+          }).includes((country.id).toString())
+        })
+      } else {
+        this.filtered_doors = [...this.GET_DOORS]
+        this.filtered_countries = [...this.GET_COUNTRIES]
+      }
+      this.$store.commit('SET_BSD', this.filtered_doors)
+    },
+    selected_countries() {
+      if (this.selected_countries.length > 0) {
+        this.filtered_doors = this.GET_DOORS.filter(door =>
+          this.selected_countries.includes(parseInt(door.country.id))
+        )
+      } else {
+        this.filtered_doors = [...this.GET_DOORS]
+      }
+      this.$store.commit('SET_BSD', this.filtered_doors)
+    }
+  },
+  computed: {
+    ...mapGetters([
+      'GET_DOORS',
+      'GET_BRANDS',
+      'GET_COUNTRIES',
+      'GET_MATERIALS'
+    ])
+    // doors() {
+    //     if (this.search) {
+    //         if(this.filtered_brands.length > 0) {
+    //             return this.$store.getters.getDoors.filter(
+    //                 door =>
+    //                     door.name.toLowerCase().includes(this.search.toLowerCase()) && this.filtered_brands.includes(parseInt(door.brand_id))
+    //             )
+    //         } else {
+    //             return this.$store.getters.getDoors.filter(
+    //                 door => door.name.toLowerCase().includes(this.search.toLowerCase())
+    //             )
+    //         }
+    //     } else {
+    //         if(this.filtered_brands.length > 0) {
+    //             return this.$store.getters.getDoors.filter(
+    //                 door => this.filtered_brands.includes(parseInt(door.brand_id))
+    //             )
+    //         } else {
+    //             return this.$store.getters.getDoors
+    //         }
+    //     }
+    // },
+    // brands() {
+    //     return this.$store.getters.getBrands
+    // }
+  },
+  methods: {
+    async addToCart(id) {
+      await axios.post('/api/add_to_cart', {
+        door_id: id,
+        quantity: 1,
+        user_id: this.$store.state.user.id
+      }).then(res => {
+        console.log(res.data)
+        this.$store.dispatch('GET_USER_FROM_API')
+        this.snackbar = true
+        this.snackbar_text = 'Успешно добавлено в корзину!'
+      }).catch(err => {
+        console.log(err)
+      })
+    },
+    ...mapActions([
+      'GET_DOORS_API',
+      'GET_BRANDS_API',
+      'GET_COUNTRIES_API',
+      'GET_MATERIALS_API'
+    ])
+  },
+  filters: {
+    price_format(price) {
+      return price.toLocaleString()
+    }
+  }
+}
+</script>
+
+<style scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+{
+  opacity: 0;
+}
+</style>
