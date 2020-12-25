@@ -1,5 +1,32 @@
 <template>
   <div>
+    <v-dialog
+      v-model="dialog"
+      persistent
+      max-width="290"
+    >
+      <v-card>
+        <v-card-title class="headline">
+          Статус заказа
+        </v-card-title>
+        <v-card-text>
+          Ваш заказ успешно оформлен!
+        </v-card-text>
+        <v-card-actions>
+          <div
+            class="text-center w-100"
+          >
+            <v-spacer></v-spacer>
+            <v-btn
+              color="success"
+              @click="dialog = false"
+            >
+              Окей
+            </v-btn>
+          </div>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
     <v-snackbar
       v-model="snackbar"
       top
@@ -111,6 +138,33 @@
           <p class="h3 font-weight-bold text-info"> {{getTotalSum()}} <i>₸</i></p>
         </v-col>
       </v-row>
+      <v-row class="justify-content-end">
+        <v-col
+          cols="12"
+          md="3"
+        >
+          <v-select
+            v-model="selected"
+            :items="order_types"
+            item-text="title"
+            item-value="id"
+            label="Тип заказа"
+            dense
+            outlined
+          ></v-select>
+        </v-col>
+      </v-row>
+      <v-row class="justify-content-end">
+        <v-btn
+          style="background-color: #17a2b8; color:white; font-size: 16px"
+          :ripple="false"
+          class="text-capitalize mr-4 px-15"
+          large
+          @click="make_order"
+        >
+          Оформить заказ
+        </v-btn>
+      </v-row>
     </template>
   </div>
 </template>
@@ -122,19 +176,43 @@ export default {
   name: "Cart",
   data() {
     return {
+      selected: '',
       snackbar: false,
       snackbar_color: '',
       snackbar_text: '',
+      order_types: [
+        {
+          id: 0,
+          title: 'Самовывоз'
+        },
+        {
+          id: 1,
+          title: 'Доставка (+1000тг)'
+        }
+      ],
       mdiMinus,
       mdiPlus,
       mdiClose,
-      mdiCartVariant
+      mdiCartVariant,
+      dialog: false
     }
   },
   mounted() {
 
   },
   methods: {
+    async make_order() {
+      await axios.post('/api/orders', {
+        user_id: this.$store.state.user.id,
+        type: this.selected.length > 0 ? parseInt(this.selected) : 0,
+        total_sum: this.getTotalSum()
+      })
+        .then(res => {
+          console.log(res.data)
+          this.dialog = true
+        })
+    },
+
     async delete_item_from_cart(id, idx) {
       await axios.delete('/api/delete_from_cart/' + id)
         .then(res => {
@@ -150,7 +228,7 @@ export default {
       for(let i=0;i<this.cart.length;i++) {
         sum += (this.cart[i].quantity*this.cart[i].door.price)
       }
-      return sum
+      return sum + (this.selected === 1 ? 1000 : 0)
     }
   },
   computed: {

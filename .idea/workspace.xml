@@ -25,28 +25,18 @@
     <list default="true" id="2dc0cfa6-ab22-48e8-a953-c62d139f62e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e064a020-0525-41d9-903c-5cec05d2be79.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e064a020-0525-41d9-903c-5cec05d2be79/storage_v2/_src_/database/doors.hVK1BQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e064a020-0525-41d9-903c-5cec05d2be79/storage_v2/_src_/database/doors.hVK1BQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e064a020-0525-41d9-903c-5cec05d2be79/storage_v2/_src_/database/doors.hVK1BQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e064a020-0525-41d9-903c-5cec05d2be79/storage_v2/_src_/database/doors.hVK1BQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/OrderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Carousel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Carousel.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/DoorAdmin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/DoorAdmin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ColorAdmin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ColorAdmin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/MaterialAdmin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/MaterialAdmin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/OrderAdmin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/OrderAdmin.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/Admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Admin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/DoorView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/DoorView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Cart.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +132,6 @@
       <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/vendor/symfony/mime" />
-      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/string" />
       <path value="$PROJECT_DIR$/vendor/symfony/finder" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
@@ -152,7 +141,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
       <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
       <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
@@ -182,6 +170,8 @@
       <path value="$PROJECT_DIR$/vendor/tymon/jwt-auth" />
       <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
       <path value="$PROJECT_DIR$/vendor/namshi/jose" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kMwwmgqJ7TODqhM6rm1ix6qv6S" />
@@ -262,6 +252,7 @@
       <workItem from="1608722204913" duration="927000" />
       <workItem from="1608812634455" duration="21385000" />
       <workItem from="1608867976833" duration="2846000" />
+      <workItem from="1608880280538" duration="7671000" />
     </task>
     <servers />
   </component>
@@ -278,21 +269,22 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="249" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608813826703">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="233" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608880941438">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1607164435007" />
+    <state x="233" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1608880941438" />
     <state x="249" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1608813826703" />
     <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606065625018">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1606065625018" />
-    <state x="396" y="103" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608839951206">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="371" y="95" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608886669446">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="371" y="95" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1607685619260" />
+    <state x="371" y="95" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1608886669446" />
     <state x="396" y="103" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1608839951206" />
     <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1607926883764">
       <screen x="0" y="0" width="1280" height="680" />
@@ -302,33 +294,33 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" key="FileDocumentManager.FileCacheConflict/0.0.1280.680@0.0.1280.680" timestamp="1606065580287" />
-    <state width="1089" height="161" key="GridCell.Tab.0.bottom" timestamp="1608814185381">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1069" height="117" key="GridCell.Tab.0.bottom" timestamp="1608887954440">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1069" height="143" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1607799645083" />
+    <state width="1069" height="117" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608887954440" />
     <state width="1089" height="161" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1608814185381" />
-    <state width="1089" height="161" key="GridCell.Tab.0.center" timestamp="1608814185381">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1069" height="117" key="GridCell.Tab.0.center" timestamp="1608887954440">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1069" height="143" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1607799645083" />
+    <state width="1069" height="117" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1608887954440" />
     <state width="1089" height="161" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1608814185381" />
-    <state width="1089" height="161" key="GridCell.Tab.0.left" timestamp="1608814185381">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1069" height="117" key="GridCell.Tab.0.left" timestamp="1608887954440">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1069" height="143" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1607799645075" />
+    <state width="1069" height="117" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1608887954440" />
     <state width="1089" height="161" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1608814185381" />
-    <state width="1089" height="161" key="GridCell.Tab.0.right" timestamp="1608814185381">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state width="1069" height="117" key="GridCell.Tab.0.right" timestamp="1608887954440">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1069" height="143" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1607799645083" />
+    <state width="1069" height="117" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1608887954440" />
     <state width="1089" height="161" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1608814185381" />
     <state x="297" y="151" key="run.anything.popup" timestamp="1607687424085">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1607687424085" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1607707436941">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1608881709049">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1607707436941" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1608881709049" />
   </component>
 </project>

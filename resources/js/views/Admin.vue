@@ -48,19 +48,49 @@
         ></DoorAdmin>
       </v-tab-item>
       <v-tab-item :value="1">
-        <BrandAdmin></BrandAdmin>
+        <BrandAdmin
+          @snackbar="(text, color) => (
+            this.snackbar_text = text,
+            this.snackbar = true,
+            this.snackbar_color = color
+          )"
+        ></BrandAdmin>
       </v-tab-item>
       <v-tab-item :value="2">
-        <CountryAdmin></CountryAdmin>
+        <CountryAdmin
+          @snackbar="(text, color) => (
+            this.snackbar_text = text,
+            this.snackbar = true,
+            this.snackbar_color = color
+          )"
+        ></CountryAdmin>
       </v-tab-item>
       <v-tab-item :value="3">
-        <ColorAdmin></ColorAdmin>
+        <ColorAdmin
+          @snackbar="(text, color) => (
+            this.snackbar_text = text,
+            this.snackbar = true,
+            this.snackbar_color = color
+          )"
+        ></ColorAdmin>
       </v-tab-item>
       <v-tab-item :value="4">
-        <MaterialAdmin></MaterialAdmin>
+        <MaterialAdmin
+          @snackbar="(text, color) => (
+            this.snackbar_text = text,
+            this.snackbar = true,
+            this.snackbar_color = color
+          )"
+        ></MaterialAdmin>
       </v-tab-item>
       <v-tab-item :value="5">
-        <OrderAdmin></OrderAdmin>
+        <OrderAdmin
+          @snackbar="(text, color) => (
+            this.snackbar_text = text,
+            this.snackbar = true,
+            this.snackbar_color = color
+          )"
+        ></OrderAdmin>
       </v-tab-item>
     </v-tabs-items>
   </div>

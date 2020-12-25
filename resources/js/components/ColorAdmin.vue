@@ -238,7 +238,7 @@ export default {
       if (this.editedIndex > -1) {
         this.edit_color(this.editItemID)
       } else {
-        this.add_country()
+        this.add_color()
       }
       this.close()
     },
