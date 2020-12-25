@@ -5,6 +5,7 @@
     sort-by="created_at"
     sort-desc
     class="elevation-5"
+    calculate-widths
   >
     {{ doors }}
     <template v-slot:top>

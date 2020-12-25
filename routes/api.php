@@ -17,7 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::apiResources([
     'doors' => \App\Http\Controllers\API\DoorController::class,
     'brands' => \App\Http\Controllers\API\BrandController::class,
-    'countries' => \App\Http\Controllers\API\CountryController::class
+    'countries' => \App\Http\Controllers\API\CountryController::class,
+    'colors' => \App\Http\Controllers\API\ColorController::class,
+    'materials' => \App\Http\Controllers\API\MaterialController::class,
+    'orders' => \App\Http\Controllers\API\OrderController::class
 ]);
 
 //Route::get('/get_cart','App\Http\Controllers\API\CartController@get_cart');

@@ -33,7 +33,10 @@ const routes = [
   {
     path: '/adminka',
     name: 'adminka',
-    component: Admin
+    component: Admin,
+    meta: {
+      noContainer: true
+    }
   },
   {
     path: '/door/:id',

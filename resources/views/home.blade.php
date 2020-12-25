@@ -26,9 +26,9 @@
 <div id="app">
   <v-app class="bg-light">
     <c-header></c-header>
-    <b-container class="mt-4">
+    <div :class="{'container-md': !$route.meta.noContainer}">
       <router-view></router-view>
-    </b-container>
+    </div>
     <c-footer></c-footer>
   </v-app>
 </div>

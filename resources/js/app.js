@@ -37,9 +37,11 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import {BootstrapVue, BootstrapVueIcons} from "bootstrap-vue";
+import VueScrollTo from 'vue-scrollto'
 
 Vue.use(BootstrapVueIcons);
 Vue.use(BootstrapVue);
+Vue.use(VueScrollTo)
 Vue.use(VueMask)
 const app = new Vue({
   el: '#app',

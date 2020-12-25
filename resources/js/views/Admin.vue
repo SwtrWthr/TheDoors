@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mx-6 mt-5">
     <v-snackbar
       v-model="snackbar"
       top
@@ -29,6 +29,9 @@
       <v-tab>Двери</v-tab>
       <v-tab>Брэнды</v-tab>
       <v-tab>Страны</v-tab>
+      <v-tab>Цвета</v-tab>
+      <v-tab>Материалы</v-tab>
+      <v-tab>Заказы</v-tab>
     </v-tabs>
     <v-tabs-items
       v-model="tab"
@@ -50,6 +53,15 @@
       <v-tab-item :value="2">
         <CountryAdmin></CountryAdmin>
       </v-tab-item>
+      <v-tab-item :value="3">
+        <ColorAdmin></ColorAdmin>
+      </v-tab-item>
+      <v-tab-item :value="4">
+        <MaterialAdmin></MaterialAdmin>
+      </v-tab-item>
+      <v-tab-item :value="5">
+        <OrderAdmin></OrderAdmin>
+      </v-tab-item>
     </v-tabs-items>
   </div>
 </template>
@@ -59,9 +71,12 @@ import {mdiPlaylistEdit, mdiPencil, mdiDelete, mdiClose} from '@mdi/js'
 import DoorAdmin from "../components/DoorAdmin";
 import BrandAdmin from "../components/BrandAdmin";
 import CountryAdmin from "../components/CountryAdmin";
+import MaterialAdmin from "../components/MaterialAdmin";
+import OrderAdmin from "../components/OrderAdmin";
+import ColorAdmin from "../components/ColorAdmin";
 export default {
   name: "Admin",
-  components: {BrandAdmin, DoorAdmin, CountryAdmin},
+  components: {ColorAdmin, OrderAdmin, MaterialAdmin, BrandAdmin, DoorAdmin, CountryAdmin},
   data() {
     return {
       tab: 0,

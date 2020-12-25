@@ -1,12 +1,15 @@
 <template>
-  <b-container fluid="xl" class="px-0 ">
+  <b-container
+    class="px-0"
+    fluid="md"
+  >
     <v-carousel
       v-model="model"
       hide-delimiter-background
       height="400"
       light
       cycle
-      interval="4000"
+      interval="5000"
       show-arrows-on-hover
     >
       <v-carousel-item
@@ -35,7 +38,18 @@
                 <div class="text-md-h2">
                   <p class="text-info h5 mb-3">НОВИНКА!</p>
                   <p class="text-sm-h3 text-sm-end mb-0">{{ door.name }}</p>
-                  <v-btn elevation="7" color="primary" :ripple="false" class="text-capitalize ml-auto" :to="{name: 'DoorView', params: {id: door.id}}">Подробнее</v-btn>
+                  <v-btn
+                    elevation="7"
+                    color="primary"
+                    :ripple="false"
+                    class="text-capitalize ml-auto"
+                    :to="{
+                      name: 'DoorView',
+                      params: {
+                        id: door.id
+                      }
+                    }"
+                  >Подробнее</v-btn>
                 </div>
               </v-row>
             </v-col>
@@ -66,22 +80,12 @@
 <script>
 export default {
   name: "Carousel",
+  props: ['doors'],
   data() {
     return {
-      model: 0,
-      colors: [
-        'light',
-        'primary',
-        'success',
-        'danger'
-      ]
+      model: 0
     }
   },
-  computed: {
-    doors() {
-      return this.$store.getters.GET_DOORS
-    }
-  }
 }
 </script>
 

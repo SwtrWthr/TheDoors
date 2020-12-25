@@ -3,8 +3,51 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dc0cfa6-ab22-48e8-a953-c62d139f62e2" name="Default Changelist" comment="" />
+    <list default="true" id="2dc0cfa6-ab22-48e8-a953-c62d139f62e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e064a020-0525-41d9-903c-5cec05d2be79.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e064a020-0525-41d9-903c-5cec05d2be79/storage_v2/_src_/database/doors.hVK1BQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e064a020-0525-41d9-903c-5cec05d2be79/storage_v2/_src_/database/doors.hVK1BQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e064a020-0525-41d9-903c-5cec05d2be79/storage_v2/_src_/database/doors.hVK1BQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e064a020-0525-41d9-903c-5cec05d2be79/storage_v2/_src_/database/doors.hVK1BQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Carousel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Carousel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/DoorAdmin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/DoorAdmin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Admin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Admin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/DoorView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/DoorView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +67,9 @@
         <option value="Vue Single File Component" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -214,25 +260,40 @@
       <workItem from="1607832645548" duration="1344000" />
       <workItem from="1607926866413" duration="24000" />
       <workItem from="1608722204913" duration="927000" />
+      <workItem from="1608812634455" duration="21385000" />
+      <workItem from="1608867976833" duration="2846000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="233" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607164435007">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="249" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608813826703">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="233" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1607164435007" />
+    <state x="249" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1608813826703" />
     <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606065625018">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1606065625018" />
-    <state x="371" y="95" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607685619260">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="396" y="103" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608839951206">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="371" y="95" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1607685619260" />
+    <state x="396" y="103" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1608839951206" />
     <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1607926883764">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -241,22 +302,26 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" key="FileDocumentManager.FileCacheConflict/0.0.1280.680@0.0.1280.680" timestamp="1606065580287" />
-    <state width="1069" height="143" key="GridCell.Tab.0.bottom" timestamp="1607799645083">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1089" height="161" key="GridCell.Tab.0.bottom" timestamp="1608814185381">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1069" height="143" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1607799645083" />
-    <state width="1069" height="143" key="GridCell.Tab.0.center" timestamp="1607799645083">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1089" height="161" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1608814185381" />
+    <state width="1089" height="161" key="GridCell.Tab.0.center" timestamp="1608814185381">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1069" height="143" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1607799645083" />
-    <state width="1069" height="143" key="GridCell.Tab.0.left" timestamp="1607799645075">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1089" height="161" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1608814185381" />
+    <state width="1089" height="161" key="GridCell.Tab.0.left" timestamp="1608814185381">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1069" height="143" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1607799645075" />
-    <state width="1069" height="143" key="GridCell.Tab.0.right" timestamp="1607799645083">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1089" height="161" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1608814185381" />
+    <state width="1089" height="161" key="GridCell.Tab.0.right" timestamp="1608814185381">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1069" height="143" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1607799645083" />
+    <state width="1089" height="161" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1608814185381" />
     <state x="297" y="151" key="run.anything.popup" timestamp="1607687424085">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-white mt-5">
     <v-snackbar
       v-model="snackbar"
       top
@@ -7,7 +7,7 @@
       color="success"
       text
     >
-      {{snackbar_text}}
+      {{ snackbar_text }}
       <template v-slot:action="{ attrs }">
         <v-btn
           color="success"
@@ -16,16 +16,30 @@
           @click="snackbar = false"
           fab
         >
-          <v-icon>{{mdiClose}}</v-icon>
+          <v-icon>{{ mdiClose }}</v-icon>
         </v-btn>
       </template>
     </v-snackbar>
-    <v-row v-if="door">
+    <template v-if="loading">
+      <v-skeleton-loader
+        class="mx-auto"
+        width="100%"
+        height="100%"
+        type="image"
+      ></v-skeleton-loader>
+      <v-skeleton-loader
+        class="mx-auto"
+        width="100%"
+        height="100%"
+        type="image"
+      ></v-skeleton-loader>
+    </template>
+    <v-row v-else>
       <v-col
         cols="5"
         class="pa-10"
       >
-        <div class="border">
+        <div>
           <v-img :src="'../images/'+door.image" fluid></v-img>
         </div>
       </v-col>
@@ -33,7 +47,7 @@
         cols="7"
         class="pa-10"
       >
-        <div class="border pa-15 pb-3 bg-white">
+        <div class="pa-15 pb-3 bg-white">
           <p class="h3 font-weight-bold mb-0">{{ door.name }}</p>
           <v-rating
             color="warning"
@@ -46,9 +60,20 @@
           ></v-rating>
           <p class="font-weight-bold text-info my-5"
              style="font-size: 30px">{{ door.price | price_format }}<i>₸</i></p>
-          <p style="font-size: 15px" class="my-0"><b>Доступность:</b> {{door.quantity > 0 ? 'В наличии' : 'Нету в наличии'}}</p>
-          <p style="font-size: 15px" class="my-0"><b>Брэнд:</b> {{door.brand.name}}</p>
-          <p style="font-size: 15px" class="my-0"><b>Страна производства:</b> {{door.country.name}}</p>
+          <p style="font-size: 15px" class="my-0"><b>Доступность:</b>
+            {{ door.quantity > 0 ? 'В наличии' : 'Нету в наличии' }}</p>
+          <p style="font-size: 15px" class="my-0"><b>Брэнд:</b> {{ door.brand.name }}</p>
+          <p style="font-size: 15px" class="my-0"><b>Страна производства:</b> {{ door.country.name }}</p>
+          <p v-if="door.colors.length>0" style="font-size: 15px" class="my-0"><b>Цвет:</b>
+            <span v-for="(item,idx) in door.colors">
+              {{ item.name + (idx === door.colors.length - 1 ? '' : ',') }}
+            </span>
+          </p>
+          <p v-if="door.materials.length>0" style="font-size: 15px" class="my-0"><b>Материал:</b>
+            <span v-for="(item,idx) in door.materials">
+              {{ item.name + (idx === door.materials.length - 1 ? '' : ',') }}
+            </span>
+          </p>
           <v-row
             class="align-items-center"
           >
@@ -92,6 +117,7 @@ export default {
   name: "DoorView",
   data() {
     return {
+      loading: false,
       quan: 1,
       snackbar_text: '',
       snackbar: false,
@@ -126,7 +152,11 @@ export default {
     }
   },
   mounted() {
+    this.loading=true
     this.getDoor()
+      .then(() => {
+        this.loading = false
+      })
   },
   filters: {
     price_format(price) {
